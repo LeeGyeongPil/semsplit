@@ -1,0 +1,480 @@
+{
+ "format": 1,
+ "generator": {
+  "source": "legacy",
+  "langchain-experimental": "0.4.2",
+  "python": "3.12.13",
+  "numpy": "2.5.5"
+ },
+ "embeddings": "hash",
+ "cases": [
+  {
+   "id": "en-percentile",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "percentile"
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99
+   ]
+  },
+  {
+   "id": "en-standard_deviation",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "standard_deviation"
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "en-interquartile",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "interquartile"
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "en-gradient",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "gradient"
+   },
+   "chunks": [
+    "Cats are small domestic animals.",
+    "Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    32
+   ]
+  },
+  {
+   "id": "ko-percentile",
+   "text": "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다.",
+   "config": {
+    "breakpoint_threshold_type": "percentile"
+   },
+   "chunks": [
+    "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다.",
+    "오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다."
+   ],
+   "start_index": [
+    0,
+    48
+   ]
+  },
+  {
+   "id": "ko-standard_deviation",
+   "text": "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다.",
+   "config": {
+    "breakpoint_threshold_type": "standard_deviation"
+   },
+   "chunks": [
+    "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "ko-interquartile",
+   "text": "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다.",
+   "config": {
+    "breakpoint_threshold_type": "interquartile"
+   },
+   "chunks": [
+    "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "ko-gradient",
+   "text": "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다.",
+   "config": {
+    "breakpoint_threshold_type": "gradient"
+   },
+   "chunks": [
+    "고양이는 작은 반려동물이다.",
+    "고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다."
+   ],
+   "start_index": [
+    0,
+    15
+   ]
+  },
+  {
+   "id": "ja-percentile",
+   "text": "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。",
+   "config": {
+    "breakpoint_threshold_type": "percentile"
+   },
+   "chunks": [
+    "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。"
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "ja-standard_deviation",
+   "text": "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。",
+   "config": {
+    "breakpoint_threshold_type": "standard_deviation"
+   },
+   "chunks": [
+    "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。"
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "ja-interquartile",
+   "text": "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。",
+   "config": {
+    "breakpoint_threshold_type": "interquartile"
+   },
+   "chunks": [
+    "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。"
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "ja-gradient",
+   "text": "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。",
+   "config": {
+    "breakpoint_threshold_type": "gradient"
+   },
+   "chunks": [
+    "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。"
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "en-percentile-50",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares.",
+    "The market index lost three percent.",
+    "Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99,
+    135,
+    162,
+    198
+   ]
+  },
+  {
+   "id": "ko-percentile-50",
+   "text": "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다. 오늘 주식 시장이 크게 떨어졌다. 투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다.",
+   "config": {
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "고양이는 작은 반려동물이다. 고양이는 따뜻한 곳에서 잠을 잔다. 고양이는 쥐를 쫓는다.",
+    "오늘 주식 시장이 크게 떨어졌다.",
+    "투자자들이 은행 주식을 팔았다. 시장 지수가 3% 하락했다."
+   ],
+   "start_index": [
+    0,
+    48,
+    66
+   ]
+  },
+  {
+   "id": "ja-custom-regex",
+   "text": "猫は小さな動物です。猫は暖かい場所で寝ます。今日、株式市場が下落しました。投資家は銀行株を売りました。",
+   "config": {
+    "sentence_split_regex": "(?<=[。！？])",
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "猫は小さな動物です。 猫は暖かい場所で寝ます。",
+    "今日、株式市場が下落しました。 投資家は銀行株を売りました。",
+    ""
+   ],
+   "start_index": [
+    0,
+    23,
+    53
+   ]
+  },
+  {
+   "id": "en-number-of-chunks-3",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "number_of_chunks": 3
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99,
+    135
+   ]
+  },
+  {
+   "id": "en-min-chunk-size-200",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_amount": 50,
+    "min_chunk_size": 200
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent.",
+    "Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    201
+   ]
+  },
+  {
+   "id": "en-buffer-0",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "buffer_size": 0,
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares.",
+    "The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99,
+    135,
+    162
+   ]
+  },
+  {
+   "id": "en-buffer-2",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "buffer_size": 2,
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares.",
+    "The market index lost three percent.",
+    "Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99,
+    135,
+    162,
+    198
+   ]
+  },
+  {
+   "id": "en-std-1",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "standard_deviation",
+    "breakpoint_threshold_amount": 1
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99
+   ]
+  },
+  {
+   "id": "en-iqr-0.5",
+   "text": "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds. The stock market fell sharply today. Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_type": "interquartile",
+    "breakpoint_threshold_amount": 0.5
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places. Many cats chase mice and birds.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares. The market index lost three percent. Rain is expected tomorrow in the city. The weather service issued a rain warning. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    99,
+    135
+   ]
+  },
+  {
+   "id": "trailing-space",
+   "text": "One. Two. Three. ",
+   "config": {
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "One. Two. Three.",
+    ""
+   ],
+   "start_index": [
+    0,
+    16
+   ]
+  },
+  {
+   "id": "empty-string",
+   "text": "",
+   "config": {},
+   "chunks": [
+    ""
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "one-sentence",
+   "text": "Just one sentence here.",
+   "config": {},
+   "chunks": [
+    "Just one sentence here."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "gradient-two-sentences",
+   "text": "First sentence. Second sentence.",
+   "config": {
+    "breakpoint_threshold_type": "gradient"
+   },
+   "chunks": [
+    "First sentence.",
+    "Second sentence."
+   ],
+   "start_index": [
+    0,
+    15
+   ]
+  },
+  {
+   "id": "two-sentences-percentile",
+   "text": "Cats purr. Stocks fell.",
+   "config": {
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "Cats purr. Stocks fell."
+   ],
+   "start_index": [
+    0
+   ]
+  },
+  {
+   "id": "multiline-newlines",
+   "text": "Cats are small domestic animals.\nCats like to sleep in warm places.\n\nThe stock market fell sharply today.\nInvestors sold bank shares.\n\nRain is expected tomorrow in the city.\nBring an umbrella for the rain.",
+   "config": {
+    "breakpoint_threshold_amount": 50
+   },
+   "chunks": [
+    "Cats are small domestic animals. Cats like to sleep in warm places.",
+    "The stock market fell sharply today.",
+    "Investors sold bank shares. Rain is expected tomorrow in the city. Bring an umbrella for the rain."
+   ],
+   "start_index": [
+    0,
+    67,
+    103
+   ]
+  },
+  {
+   "id": "long-document",
+   "text": "The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor.",
+   "config": {
+    "breakpoint_threshold_amount": 80
+   },
+   "chunks": [
+    "The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget.",
+    "Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich.",
+    "The harbor opens at dawn.",
+    "Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget.",
+    "Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich.",
+    "The harbor opens at dawn.",
+    "Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget.",
+    "Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich.",
+    "The harbor opens at dawn.",
+    "Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor."
+   ],
+   "start_index": [
+    0,
+    250,
+    620,
+    651,
+    676,
+    900,
+    1270,
+    1301,
+    1326,
+    1550,
+    1920,
+    1951,
+    1976
+   ]
+  },
+  {
+   "id": "long-document-min-size",
+   "text": "The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor.",
+   "config": {
+    "breakpoint_threshold_amount": 80,
+    "min_chunk_size": 300
+   },
+   "chunks": [
+    "The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. The council debated the annual budget. Budget cuts reduced the library hours. Taxpayers asked how the budget is spent. Tomatoes grow best in a sunny garden. Water the garden every morning. Compost keeps garden soil rich. Tomatoes grow best in a sunny garden. Water the garden every morning.",
+    "Compost keeps garden soil rich. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor. The harbor opens at dawn. Fishing boats leave the harbor early. Gulls follow the boats out of the harbor."
+   ],
+   "start_index": [
+    0,
+    621,
+    1274,
+    1927
+   ]
+  }
+ ]
+}
