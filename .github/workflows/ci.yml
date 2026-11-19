@@ -1,0 +1,33 @@
+# No keys or network models needed: tests use the offline HashEmbeddings mock.
+name: ci
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 3 * * 1"   # weekly: catch breakage from new langchain-core / numpy releases
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv python install ${{ matrix.python }}
+      - run: uv sync --locked --python ${{ matrix.python }}
+      - run: uv run --python ${{ matrix.python }} pytest -q
+      - run: uv run --python ${{ matrix.python }} python examples/quickstart.py
+      - run: uv build
+  legacy-parity:
+    # Live comparison with the archived original (same vectors fed to both).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv python install
+      - run: uv sync --locked --extra legacy
+      - run: uv run --extra legacy pytest -q -m legacy
+      - run: uv run --extra legacy semsplit parity examples/data/three_topics.en.txt examples/data/ko.txt --against legacy --embeddings hash --json
