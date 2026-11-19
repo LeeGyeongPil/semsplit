@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "semsplit"
+version = "0.1.0"
+description = "Drop-in successor of langchain-experimental's SemanticChunker: embedding-distance RAG chunking with a parity check, opt-in max chunk size, exact start_index and CJK sentence splitting."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "LeeGyeongPil" }]
+keywords = ["langchain", "rag", "chunking", "semantic-chunker", "text-splitter", "embeddings"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = [
+  "langchain-core>=1.0,<2",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+# Only needed by `semsplit parity --against legacy` (the archived original, pinned to its last release).
+legacy = ["langchain-experimental==0.4.2"]
+
+[project.scripts]
+semsplit = "semsplit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/LeeGyeongPil/semsplit"
+Issues = "https://github.com/LeeGyeongPil/semsplit/issues"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/semsplit"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/semsplit", "tests", "examples", "scripts", "README.md", "README.ko.md", "LICENSE", "NOTICE", "CHANGELOG.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["legacy: needs the archived langchain-experimental (install with the `legacy` extra)"]
+filterwarnings = ["error::DeprecationWarning:semsplit"]

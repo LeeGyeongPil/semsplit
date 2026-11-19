@@ -1,0 +1,10 @@
+semsplit is an independent re-implementation. Its default behaviour and constructor
+arguments are compatible with `SemanticChunker` from langchain-experimental
+(https://github.com/langchain-ai/langchain-experimental, MIT License, archived 2026-05-22),
+whose algorithm comes from Greg Kamradt's "5 Levels Of Text Splitting" notebook
+(https://github.com/FullStackRetrieval-com/RetrievalTutorials).
+
+tests/golden/semantic_chunker_0.4.2.json holds the output of langchain-experimental 0.4.2
+for the inputs listed in the file; it is recorded data, not code.
+
+"LangChain" is a trademark of its owners; this project is not affiliated with or endorsed by them.
